@@ -13,6 +13,7 @@ This program is intended to run a questionnaire that takes users inputs and stor
 - [x] Create project team in Github
 - [x] Model out system plan
 - [x] Add repositories to team
+- [ ] Pick starting point from sample code
 - [ ] Begin coding questionnaire
 - [ ] Add sequential questions to questionnaire
 - [ ] Finish questionnaire
