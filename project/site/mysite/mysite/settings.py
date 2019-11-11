@@ -37,7 +37,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django_markup',
+    'transmeta',
+    'questionnaire',
+    'questionnaire.page',
+    'mysite',
 )
+
+SITE_ID = 1
 
 LANGUAGES = (
     ('sp', _('Spanish')),
