@@ -40,8 +40,8 @@ INSTALLED_APPS = (
 )
 
 LANGUAGES = (
-    ('sp', _('Spanish')),
-    ('en', _('English')),
+    ('sp', ('Spanish')),
+    ('en', ('English')),
 )
 
 MIDDLEWARE_CLASSES = (
