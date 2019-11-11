@@ -39,6 +39,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 )
 
+LANGUAGES = (
+    ('sp', _('Spanish')),
+    ('en', _('English')),
+)
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
