@@ -33,7 +33,7 @@ setup(
     ],
     zip_safe=False,
     install_requires=[
-        'django>=1.8,<1.9',
+        'django>=1.11.19',
         'django-markup',
         'django-transmeta',
         'pyparsing',
