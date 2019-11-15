@@ -1,0 +1,13 @@
+- [x] Create project team in Github  **Evan Bell**
+- [x] Model plan of the questionnaire  **Evan Bell**
+- [x] Add repositories to team  **Evan Bell**
+- [x] Evaluate repositories for useful code  **Evan Bell**
+- [x] Create mysite folder for project files  **Evan Bell**
+- [x] Use Django to create site  **Evan Bell**
+- [x] Test site on local host  **Evan Bell**
+- [x] Code in first question from paper questionnaire  **Evan Bell**
+- [ ] Test the first question and that it has correct input function  **Evan Bell**
+- [ ] Add remaining questions to code  **Evan Bell**
+- [ ] Test that all questions are in the right order  **Evan Bell**
+- [ ] Link answers with sql database  **Evan Bell**
+- [ ] Make commands to export sql data into excel spreadsheets  **Evan Bell**
