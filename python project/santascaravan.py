@@ -12,7 +12,7 @@ import datetime
 #path_root = os.path.dirname(os.path.abspath(__file__)) #grab the file system path to the current script file
 #database_file_path = str(path_root)+"/myinventory.db" #construct the path to the database file (only necessary if the current working directory is not the same as the folder where this Python file is located.)
 #if you uncomment the three lines above, be sure to comment out this next line
-database_file_path = "myinventory.db"
+database_file_path = "scaravan.db"
 def create_connection(db_file):
     """ create a database connection to the SQLite database
         specified by the db_file
@@ -27,12 +27,29 @@ def create_connection(db_file):
         return None
 
 def insert_data():
-    name = input("Enter the name of the item: ")
-    ndc = input("Enter the national drug code of the item: ")
-    location = input ("Enter the item inventory location: ")
-    availability = input("Enter number of doses left: ")
-    arrivaldate = input("Enter arrival date: ")
-    expirationdate = input("Enter expiration date: ")
+    pname = input("Enter Parents' Name: ")
+    address = input("Enter Address: ")
+    sub = input ("Enter Subdivision/Apt Name/Trailer Park: ")
+    lot = input("Enter Lot/Apt #: ")
+    gatecode = input("Gate Code y/n: ")
+    gatecode1 = input("Enter Gate Code: ")
+    phone = input("Enter Phone #: ")
+    additcon = input("Enter Additional Contact Name: ")
+    additconnum = input("Enter Additional Contact Phone #: ")
+    work = input("What adults in this home are working full-time? ")
+    otherfam = input("Are there other Camilies living with children in this home full-time? ")
+    childnum = input("Enter Amount of children: ")
+    child1name = input("Enter First Child's Name: ")
+    child1age = input("Enter First Child's Age: ")
+    child1gend = input("Enter First Child's Gender M/F: ")
+    child1sch = input("Enter First Child's School: ")
+    child1shirt = input("Enter First Child's Shirt Size: ")
+    child1pant = input("Enter First Child's Pant Size: ")
+    child1spec = input("Enter First Child's Specific Clothing Needs: ")
+    child1not = input("Enter Any Additional Notes on First Child: ")
+    child1non1 = input("Enter First Child Non-Clothing Request 1: ")
+    child1non2 = input("Enter First Child Non-Clothing Request 2: ")
+    child1non3 = input("Enter First Child Non-Clothing Request 3: ")
     changemade = str(now.year) +"/"+str(now.month) +"/"+str(now.day)
     try:      
         sqlresult = conn.execute("INSERT INTO vaccines (name,ndc,location,availability,arrivaldate,expirationdate,changemade)\
