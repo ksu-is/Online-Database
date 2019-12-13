@@ -27,6 +27,7 @@ def create_connection(db_file):
         return None
 
 def insert_data():
+    famnumb = input("Enter Assign Family a Number: ")
     pname = input("Enter Parents' Name: ")
     address = input("Enter Address: ")
     sub = input ("Enter Subdivision/Apt Name/Trailer Park: ")
@@ -85,8 +86,8 @@ def insert_data():
     child4non3 = input("Enter Fourth Child Non-Clothing Request 3: ")
     changemade = str(now.year) +"/"+str(now.month) +"/"+str(now.day)
     try:      
-        sqlresult = conn.execute("INSERT INTO santascaravan (pname,address,sub,lot,gatecode,gatecode1,phone,additcon,additconnum,work,otherfam,childnum,child1name,child1age,child1gend,child1sch,child1shirt,child1pant,child1spec,child1not,child1non1,child1non2,child1non3,child2name,child2age,child2gend,child2sch,child2shirt,child2pant,child2spec,child2not,child2non1,child2non2,child2non3,child3name,child3age,child3gend,child3sch,child3shirt,child3pant,child3spec,child3not,child3non1,child3non2,child3non3,child4name,child4age,child4gend,child4sch,child4shirt,child4pant,child4spec,child4not,child4non1,child4non2,child4non3,changemade)\
-            values("+"'"+ str(pname) +"'" + ",'"+ str(address) +"', '"+ str(sub) +"','"+ str (lot)+"','"+str(gatecode)+"','"+ str (gatecode1)+"','"+str(phone)+"','"+ str(additcon) +"','"+ str(additconnum) +"','"+ str(work) +"','"+ str(otherfam) +"','"+ str(childnum) +"','"+ str(child1name) +"','"+ str(child1age) +"','"+ str(child1gend) +"','"+ str(child1sch) +"','"+ str(child1shirt) +"','"+ str(child1pant) +"','"+ str(child1spec) +"','"+ str(child1not) +"','"+ str(child1non1) +"','"+ str(child1non2) +"','"+ str(child1non3) +"','"+ str(child2name) +"','"+ str(child2age) +"','"+ str(child2gend) +"','"+ str(child2sch) +"','"+ str(child2shirt) +"','"+ str(child2pant) +"','"+ str(child2spec) +"','"+ str(child2not) +"','"+ str(child2non1) +"','"+ str(child2non2) +"','"+ str(child2non3) +"','"+ str(child3name) +"','"+ str(child3age) +"','"+ str(child3gend) +"','"+ str(child3sch) +"','"+ str(child3shirt) +"','"+ str(child3pant) +"','"+ str(child3spec) +"','"+ str(child3not) +"','"+ str(child3non1) +"','"+ str(child3non2) +"','"+ str(child3non3) +"','"+ str(child4name) +"','"+ str(child4age) +"','"+ str(child4gend) +"','"+ str(child4sch) +"','"+ str(child4shirt) +"','"+ str(child4pant) +"','"+ str(child4spec) +"','"+ str(child4not) +"','"+ str(child4non1) +"','"+ str(child4non2) +"','"+ str(child4non3) +"','"+ str(changemade) +"')")
+        sqlresult = conn.execute("INSERT INTO santascaravan (famnumb,pname,address,sub,lot,gatecode,gatecode1,phone,additcon,additconnum,work,otherfam,childnum,child1name,child1age,child1gend,child1sch,child1shirt,child1pant,child1spec,child1not,child1non1,child1non2,child1non3,child2name,child2age,child2gend,child2sch,child2shirt,child2pant,child2spec,child2not,child2non1,child2non2,child2non3,child3name,child3age,child3gend,child3sch,child3shirt,child3pant,child3spec,child3not,child3non1,child3non2,child3non3,child4name,child4age,child4gend,child4sch,child4shirt,child4pant,child4spec,child4not,child4non1,child4non2,child4non3,changemade)\
+            values("+"'"+ str(famnumb) +"'" + ",'"+ str(pname) +"','"+ str(address) +"', '"+ str(sub) +"','"+ str (lot)+"','"+str(gatecode)+"','"+ str (gatecode1)+"','"+str(phone)+"','"+ str(additcon) +"','"+ str(additconnum) +"','"+ str(work) +"','"+ str(otherfam) +"','"+ str(childnum) +"','"+ str(child1name) +"','"+ str(child1age) +"','"+ str(child1gend) +"','"+ str(child1sch) +"','"+ str(child1shirt) +"','"+ str(child1pant) +"','"+ str(child1spec) +"','"+ str(child1not) +"','"+ str(child1non1) +"','"+ str(child1non2) +"','"+ str(child1non3) +"','"+ str(child2name) +"','"+ str(child2age) +"','"+ str(child2gend) +"','"+ str(child2sch) +"','"+ str(child2shirt) +"','"+ str(child2pant) +"','"+ str(child2spec) +"','"+ str(child2not) +"','"+ str(child2non1) +"','"+ str(child2non2) +"','"+ str(child2non3) +"','"+ str(child3name) +"','"+ str(child3age) +"','"+ str(child3gend) +"','"+ str(child3sch) +"','"+ str(child3shirt) +"','"+ str(child3pant) +"','"+ str(child3spec) +"','"+ str(child3not) +"','"+ str(child3non1) +"','"+ str(child3non2) +"','"+ str(child3non3) +"','"+ str(child4name) +"','"+ str(child4age) +"','"+ str(child4gend) +"','"+ str(child4sch) +"','"+ str(child4shirt) +"','"+ str(child4pant) +"','"+ str(child4spec) +"','"+ str(child4not) +"','"+ str(child4non1) +"','"+ str(child4non2) +"','"+ str(child4non3) +"','"+ str(changemade) +"')")
         result = conn.commit() #this actually runs the SQL and inserts the data into the database
         if result == None:
             print("*** Data saved to database. ***")
@@ -96,12 +97,12 @@ def insert_data():
                                  
 def view_data():
     try:
-        cursor = conn.execute ("SELECT pname,address,sub,lot,gatecode,gatecode1,phone,additcon,additconnum,work,otherfam,childnum,child1name,child1age,child1gend,child1sch,child1shirt,child1pant,child1spec,child1not,child1non1,child1non2,child1non3,child2name,child2age,child2gend,child2sch,child2shirt,child2pant,child2spec,child2not,child2non1,child2non2,child2non3,child3name,child3age,child3gend,child3sch,child3shirt,child3pant,child3spec,child3not,child3non1,child3non2,child3non3,child4name,child4age,child4gend,child4sch,child4shirt,child4pant,child4spec,child4not,child4non1,child4non2,child4non3,changemade FROM santascaravan" )
+        cursor = conn.execute ("SELECT famnumb,pname,address,sub,lot,gatecode,gatecode1,phone,additcon,additconnum,work,otherfam,childnum,child1name,child1age,child1gend,child1sch,child1shirt,child1pant,child1spec,child1not,child1non1,child1non2,child1non3,child2name,child2age,child2gend,child2sch,child2shirt,child2pant,child2spec,child2not,child2non1,child2non2,child2non3,child3name,child3age,child3gend,child3sch,child3shirt,child3pant,child3spec,child3not,child3non1,child3non2,child3non3,child4name,child4age,child4gend,child4sch,child4shirt,child4pant,child4spec,child4not,child4non1,child4non2,child4non3,changemade FROM santascaravan" )
         alldata = []
-        alldata.append(["Parents' Name","Address","Subdivision/Apt Name/Trailer Park","Lot/Apt #","Gatecode y/n?","Gatecode #","Phone #","Additional Contact Name","Additional Contact #","What Adults in House Are Working","Other Families Living with Children y/n","Amount Of Children","First Child's Name","First Child's Age","First Child's Gender M/F","First Child's School","First Child's Shirt Size","First Child's Pant Size","First Child's Specific Clothing Needs","Additional Notes on First Child","First Child Non-Clothing Request 1","First Child Non-Clothing Request 2","First Child Non-Clothing Request 3","Second Child's Name","Second Child's Age","Second Child's Gender M/F","Second Child's School","Second Child's Shirt Size","Second Child's Pant Size","Second Child's Specific Clothing Needs","Additional Notes on Second Child","Second Child Non-Clothing Request 1","Second Child Non-Clothing Request 2","Second Child Non-Clothing Request 3","Third Child's Name","Third Child's Age","Third Child's Gender M/F","ThirdChild's School","Third Child's Shirt Size","Third Child's Pant Size","Third Child's Specific Clothing Needs","Additional Notes on Third Child","Third Child Non-Clothing Request 1","Third Child Non-Clothing Request 2","Third Child Non-Clothing Request 3","Fourth Child's Name","Fourth Child's Age","Fourth Child's Gender M/F","Fourth Child's School","Fourth Child's Shirt Size","Fourth Child's Pant Size","Fourth Child's Specific Clothing Needs","Additional Notes on Fourth Child","Fourth Child Non-Clothing Request 1","Fourth Child Non-Clothing Request 2","Fourth Child Non-Clothing Request 3","Last Update"])
+        alldata.append(["Family Number","Parents' Name","Address","Subdivision/Apt Name/Trailer Park","Lot/Apt #","Gatecode y/n?","Gatecode #","Phone #","Additional Contact Name","Additional Contact #","What Adults in House Are Working","Other Families Living with Children y/n","Amount Of Children","First Child's Name","First Child's Age","First Child's Gender M/F","First Child's School","First Child's Shirt Size","First Child's Pant Size","First Child's Specific Clothing Needs","Additional Notes on First Child","First Child Non-Clothing Request 1","First Child Non-Clothing Request 2","First Child Non-Clothing Request 3","Second Child's Name","Second Child's Age","Second Child's Gender M/F","Second Child's School","Second Child's Shirt Size","Second Child's Pant Size","Second Child's Specific Clothing Needs","Additional Notes on Second Child","Second Child Non-Clothing Request 1","Second Child Non-Clothing Request 2","Second Child Non-Clothing Request 3","Third Child's Name","Third Child's Age","Third Child's Gender M/F","ThirdChild's School","Third Child's Shirt Size","Third Child's Pant Size","Third Child's Specific Clothing Needs","Additional Notes on Third Child","Third Child Non-Clothing Request 1","Third Child Non-Clothing Request 2","Third Child Non-Clothing Request 3","Fourth Child's Name","Fourth Child's Age","Fourth Child's Gender M/F","Fourth Child's School","Fourth Child's Shirt Size","Fourth Child's Pant Size","Fourth Child's Specific Clothing Needs","Additional Notes on Fourth Child","Fourth Child Non-Clothing Request 1","Fourth Child Non-Clothing Request 2","Fourth Child Non-Clothing Request 3","Last Update"])
         for row in cursor:
             thisrow=[]
-            for x in range(57):
+            for x in range(58):
                 thisrow.append(row[x])
             alldata.append(thisrow)
         return alldata
@@ -115,7 +116,7 @@ def update_data():
             for item in row:
                 thisrow += str(item) + "  "
             print (thisrow)
-    update_ID = input("Enter the ID of the data record to edit: ")
+    update_famnumb = input("Enter the Family Number of the data record to edit: ")
     print('''
         1 = edit name
         2 = edit ndc
@@ -128,43 +129,43 @@ def update_data():
     update_value = input ("Editing "+feature+ ": enter the new value: ")
 
     if(feature == "1"):
-        sql = "UPDATE vaccines set name = ? where id =  ?"
+        sql = "UPDATE santascaravan set name = ? where famnumb =  ?"
     elif (feature == "2"):
-       sql = "UPDATE vaccines set ndc = ? where id =  ?" 
+       sql = "UPDATE santascaravan set ndc = ? where famnumb =  ?" 
     elif (feature == "3"):
-       sql = "UPDATE vaccines set location  = ? where id =  ?"
+       sql = "UPDATE santascaravan set location  = ? where famnumb =  ?"
     elif (feature == "4"):
-       sql = "UPDATE vaccines set availability  = ? where id =  ?"
+       sql = "UPDATE santascaravan set availability  = ? where famnumb =  ?"
     elif (feature == "5"):
-       sql = "UPDATE vaccines set arrivaldate  = ? where id =  ?"
+       sql = "UPDATE santascaravan set arrivaldate  = ? where famnumb =  ?"
     elif (feature == "6"):
-       sql = "UPDATE vaccines set expirationdate = ? where id =  ?"  
+       sql = "UPDATE santascaravan set expirationdate = ? where famnumb =  ?"  
         
     try:
         #if we call the connection execute method it invisibly creates a cursor for us
-        conn.execute(sql, (update_value,update_ID))
+        conn.execute(sql, (update_value,update_famnumb))
         #update the change made date log
-        sql = "UPDATE vaccines set changemade = ? where id =  ?"
+        sql = "UPDATE santascaravan set changemade = ? where famnumb =  ?"
         changemade = str(now.year) +"/"+str(now.month) +"/"+str(now.day)
-        conn.execute(sql, (changemade,update_ID)) 
+        conn.execute(sql, (changemade,update_famnumb)) 
         
     except Error as e:
         print(e)
         pass
 
 def delete_data():
-    id_  =  input("Enter the ID for the data record to delete:")
+    famnumb_  =  input("Enter the Family Number for the data record to delete:")
     cursor = conn.cursor() #This sets a spot in the database connection (cursor) for targeted retrieval
-    cursor.execute("select name from vaccines where ID = "+id_) #create an object referencing the data
+    cursor.execute("select name from santascaravan where Family Number = "+famnumb_) #create an object referencing the data
     delete_item = cursor.fetchall() # get the data
-    confirm = input("Are you sure you want to delete " + id_ + " " + str(delete_item[0]) + "? (Enter 'y' to confirm.)")
+    confirm = input("Are you sure you want to delete " + famnumb_ + " " + str(delete_item[0]) + "? (Enter 'y' to confirm.)")
     if confirm.lower() == "y":
         try:
-            delete_sql = "DELETE FROM vaccines WHERE id = ?"
-            conn.execute(delete_sql,id_)
+            delete_sql = "DELETE FROM santascaravan WHERE famnumb = ?"
+            conn.execute(delete_sql,famnumb_)
             result = conn.commit() #capture the result of the commit and use it to check the result
             if result == None:
-                print (id_ + " " + str(delete_item[0]) + " deleted.")
+                print (famnumb_ + " " + str(delete_item[0]) + " deleted.")
             else:
                 print ("Deletion failed during SQL execution.")
         except Error as e:
