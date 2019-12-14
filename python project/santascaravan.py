@@ -179,7 +179,7 @@ def update_data():
     update_value = input ("Editing "+feature+ ": enter the new value: ")
 
     if(feature == "1"):
-        sql = "UPDATE santascaravan set pname,address,sub,lot,gatecode,gatecode1,phone,additcon,additconnum,work,otherfam,childnum,child1name,child1age,child1gend,child1sch,child1shirt,child1pant,child1spec,child1not,child1non1,child1non2,child1non3,child2name,child2age,child2gend,child2sch,child2shirt,child2pant,child2spec,child2not,child2non1,child2non2,child2non3,child3name,child3age,child3gend,child3sch,child3shirt,child3pant,child3spec,child3not,child3non1,child3non2,child3non3,child4name,child4age,child4gend,child4sch,child4shirt,child4pant,child4spec,child4not,child4non1,child4non2,child4non3,changemade = ? where famnumb =  ?"
+        sql = "UPDATE santascaravan set pname = ? where famnumb =  ?"
     elif (feature == "2"):
        sql = "UPDATE santascaravan set address = ? where famnumb =  ?" 
     elif (feature == "3"):
@@ -190,22 +190,106 @@ def update_data():
        sql = "UPDATE santascaravan set gatecode  = ? where famnumb =  ?"
     elif (feature == "6"):
        sql = "UPDATE santascaravan set gatecode1 = ? where famnumb =  ?"
-    elif (feature == "6"):
+    elif (feature == "7"):
        sql = "UPDATE santascaravan set phone = ? where famnumb =  ?"
-    elif (feature == "6"):
+    elif (feature == "8"):
        sql = "UPDATE santascaravan set additcon = ? where famnumb =  ?"
-    elif (feature == "6"):
+    elif (feature == "9"):
        sql = "UPDATE santascaravan set additconnum = ? where famnumb =  ?"
-    elif (feature == "6"):
+    elif (feature == "10"):
        sql = "UPDATE santascaravan set work = ? where famnumb =  ?"  
-    elif (feature == "6"):
+    elif (feature == "11"):
        sql = "UPDATE santascaravan set otherfam = ? where famnumb =  ?"
-    elif (feature == "6"):
+    elif (feature == "12"):
        sql = "UPDATE santascaravan set childnum = ? where famnumb =  ?"
-    elif (feature == "6"):
+    elif (feature == "13"):
        sql = "UPDATE santascaravan set child1name = ? where famnumb =  ?"
-    elif (feature == "6"):
+    elif (feature == "14"):
        sql = "UPDATE santascaravan set child1age = ? where famnumb =  ?"
+    elif (feature == "15"):
+       sql = "UPDATE santascaravan set child1gend = ? where famnumb =  ?"
+    elif (feature == "16"):
+       sql = "UPDATE santascaravan set child1sch = ? where famnumb =  ?"
+    elif (feature == "17"):
+       sql = "UPDATE santascaravan set child1shirt = ? where famnumb =  ?"
+    elif (feature == "18"):
+       sql = "UPDATE santascaravan set child1pant = ? where famnumb =  ?"
+    elif (feature == "19"):
+       sql = "UPDATE santascaravan set child1spec = ? where famnumb =  ?"
+    elif (feature == "20"):
+       sql = "UPDATE santascaravan set child1not = ? where famnumb =  ?"
+    elif (feature == "21"):
+       sql = "UPDATE santascaravan set child1non1 = ? where famnumb =  ?"
+    elif (feature == "22"):
+       sql = "UPDATE santascaravan set child1non2 = ? where famnumb =  ?"
+    elif (feature == "23"):
+       sql = "UPDATE santascaravan set child1non3 = ? where famnumb =  ?"
+    elif (feature == "24"):
+       sql = "UPDATE santascaravan set child2name = ? where famnumb =  ?"
+    elif (feature == "25"):
+       sql = "UPDATE santascaravan set child2age = ? where famnumb =  ?"
+    elif (feature == "26"):
+       sql = "UPDATE santascaravan set child2gend = ? where famnumb =  ?"
+    elif (feature == "27"):
+       sql = "UPDATE santascaravan set child2sch = ? where famnumb =  ?"
+    elif (feature == "28"):
+       sql = "UPDATE santascaravan set child2shirt = ? where famnumb =  ?"
+    elif (feature == "29"):
+       sql = "UPDATE santascaravan set child2pant = ? where famnumb =  ?"
+    elif (feature == "30"):
+       sql = "UPDATE santascaravan set child2spec = ? where famnumb =  ?"
+    elif (feature == "31"):
+       sql = "UPDATE santascaravan set child2not = ? where famnumb =  ?"
+    elif (feature == "32"):
+       sql = "UPDATE santascaravan set child2non1 = ? where famnumb =  ?"
+    elif (feature == "33"):
+       sql = "UPDATE santascaravan set child2non2 = ? where famnumb =  ?"
+    elif (feature == "34"):
+       sql = "UPDATE santascaravan set child2non3 = ? where famnumb =  ?"
+    elif (feature == "35"):
+       sql = "UPDATE santascaravan set child3name = ? where famnumb =  ?"
+    elif (feature == "36"):
+       sql = "UPDATE santascaravan set child3age = ? where famnumb =  ?"
+    elif (feature == "37"):
+       sql = "UPDATE santascaravan set child3gend = ? where famnumb =  ?"
+    elif (feature == "38"):
+       sql = "UPDATE santascaravan set child3sch = ? where famnumb =  ?"
+    elif (feature == "39"):
+       sql = "UPDATE santascaravan set child3shirt = ? where famnumb =  ?"
+    elif (feature == "40"):
+       sql = "UPDATE santascaravan set child3pant = ? where famnumb =  ?"
+    elif (feature == "41"):
+       sql = "UPDATE santascaravan set child3spec = ? where famnumb =  ?"
+    elif (feature == "42"):
+       sql = "UPDATE santascaravan set child3not = ? where famnumb =  ?"
+    elif (feature == "43"):
+       sql = "UPDATE santascaravan set child3non1 = ? where famnumb =  ?"
+    elif (feature == "44"):
+       sql = "UPDATE santascaravan set child3non2 = ? where famnumb =  ?"
+    elif (feature == "45"):
+       sql = "UPDATE santascaravan set child3non3 = ? where famnumb =  ?"
+    elif (feature == "46"):
+       sql = "UPDATE santascaravan set child4name = ? where famnumb =  ?"
+    elif (feature == "47"):
+       sql = "UPDATE santascaravan set child4age = ? where famnumb =  ?"
+    elif (feature == "48"):
+       sql = "UPDATE santascaravan set child4gend = ? where famnumb =  ?"
+    elif (feature == "49"):
+       sql = "UPDATE santascaravan set child4sch = ? where famnumb =  ?"
+    elif (feature == "50"):
+       sql = "UPDATE santascaravan set child4shirt = ? where famnumb =  ?"
+    elif (feature == "51"):
+       sql = "UPDATE santascaravan set child4pant = ? where famnumb =  ?"
+    elif (feature == "52"):
+       sql = "UPDATE santascaravan set child4spec = ? where famnumb =  ?"
+    elif (feature == "53"):
+       sql = "UPDATE santascaravan set child4not = ? where famnumb =  ?"
+    elif (feature == "54"):
+       sql = "UPDATE santascaravan set child4non1 = ? where famnumb =  ?"
+    elif (feature == "55"):
+       sql = "UPDATE santascaravan set child4non2 = ? where famnumb =  ?"
+    elif (feature == "56"):
+       sql = "UPDATE santascaravan set child4non3 = ? where famnumb =  ?"
         
     try:
         #if we call the connection execute method it invisibly creates a cursor for us
