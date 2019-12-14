@@ -38,7 +38,7 @@ def insert_data():
     additcon = input("Enter Additional Contact Name: ")
     additconnum = input("Enter Additional Contact Phone #: ")
     work = input("What adults in this home are working full-time? ")
-    otherfam = input("Are there other Camilies living with children in this home full-time? ")
+    otherfam = input("Are there other Families living with children in this home full-time? ")
     childnum = input("Enter Amount of children: ")
     child1name = input("Enter First Child's Name: ")
     child1age = input("Enter First Child's Age: ")
@@ -333,7 +333,7 @@ else:
     print("Error connecting to database.")
 
 while True:
-    print("Welcome to the Vaccine Management System!")
+    print("Welcome to Santa's Carvan Database!")
     print("1 to view the data")
     print("2 to insert a new data record")
     print("3 to update a data record")
