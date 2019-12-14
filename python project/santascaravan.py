@@ -118,28 +118,94 @@ def update_data():
             print (thisrow)
     update_famnumb = input("Enter the Family Number of the data record to edit: ")
     print('''
-        1 = edit name
-        2 = edit ndc
-        3 = edit location
-        4 = edit availability
-        5 = edit arrivaldate
-        6 = edit expirationdate''')
+        1 = edit pname
+        2 = edit address
+        3 = edit sub
+        4 = edit lot
+        5 = edit gatecode
+        6 = edit phone
+        7 = edit additcon
+        8 = edit additconnum
+        9 = edit work
+        10 = edit otherfam
+        11 = edit childnum
+        12 = edit child1name
+        13 = edit child1age
+        14 = edit child1gend
+        15 = edit child1sch
+        16 = edit child1shirt
+        17 = edit child1pant
+        18 = edit child1spec
+        19 = edit child1not
+        20 = edit child1non1
+        21 = edit child1non2
+        22 = edit child1non3
+        23 = edit child2name
+        24 = edit child2age
+        25 = edit child2gend
+        26 = edit child2sch
+        27 = edit child2shirt
+        28 = edit child2pant
+        29 = edit child2spec
+        30 = edit child2not
+        31 = edit child2non1
+        32 = edit child2non2
+        33 = edit child2non3
+        34 = edit child3name
+        35 = edit child3age
+        36 = edit child3gend
+        37 = edit child3sch
+        38 = edit child3shirt
+        39 = edit child3pant
+        40 = edit child3spec
+        41 = edit child3not
+        42 = edit child3non1
+        43 = edit child3non2
+        44 = edit child3non3
+        45 = edit child4name
+        46 = edit child4age
+        47 = edit child4gend
+        48 = edit child4sch
+        49 = edit child4shirt
+        50 = edit child4pant
+        51 = edit child4spec
+        52 = edit child4not
+        53 = edit child4non1
+        54 = edit child4non2
+        55 = edit child4non3''')
+        
 
     feature = input("Enter which feature of the data do you want to edit: ")
     update_value = input ("Editing "+feature+ ": enter the new value: ")
 
     if(feature == "1"):
-        sql = "UPDATE santascaravan set name = ? where famnumb =  ?"
+        sql = "UPDATE santascaravan set pname,address,sub,lot,gatecode,gatecode1,phone,additcon,additconnum,work,otherfam,childnum,child1name,child1age,child1gend,child1sch,child1shirt,child1pant,child1spec,child1not,child1non1,child1non2,child1non3,child2name,child2age,child2gend,child2sch,child2shirt,child2pant,child2spec,child2not,child2non1,child2non2,child2non3,child3name,child3age,child3gend,child3sch,child3shirt,child3pant,child3spec,child3not,child3non1,child3non2,child3non3,child4name,child4age,child4gend,child4sch,child4shirt,child4pant,child4spec,child4not,child4non1,child4non2,child4non3,changemade = ? where famnumb =  ?"
     elif (feature == "2"):
-       sql = "UPDATE santascaravan set ndc = ? where famnumb =  ?" 
+       sql = "UPDATE santascaravan set address = ? where famnumb =  ?" 
     elif (feature == "3"):
-       sql = "UPDATE santascaravan set location  = ? where famnumb =  ?"
+       sql = "UPDATE santascaravan set sub  = ? where famnumb =  ?"
     elif (feature == "4"):
-       sql = "UPDATE santascaravan set availability  = ? where famnumb =  ?"
+       sql = "UPDATE santascaravan set lot  = ? where famnumb =  ?"
     elif (feature == "5"):
-       sql = "UPDATE santascaravan set arrivaldate  = ? where famnumb =  ?"
+       sql = "UPDATE santascaravan set gatecode  = ? where famnumb =  ?"
     elif (feature == "6"):
-       sql = "UPDATE santascaravan set expirationdate = ? where famnumb =  ?"  
+       sql = "UPDATE santascaravan set gatecode1 = ? where famnumb =  ?"
+    elif (feature == "6"):
+       sql = "UPDATE santascaravan set phone = ? where famnumb =  ?"
+    elif (feature == "6"):
+       sql = "UPDATE santascaravan set additcon = ? where famnumb =  ?"
+    elif (feature == "6"):
+       sql = "UPDATE santascaravan set additconnum = ? where famnumb =  ?"
+    elif (feature == "6"):
+       sql = "UPDATE santascaravan set work = ? where famnumb =  ?"  
+    elif (feature == "6"):
+       sql = "UPDATE santascaravan set otherfam = ? where famnumb =  ?"
+    elif (feature == "6"):
+       sql = "UPDATE santascaravan set childnum = ? where famnumb =  ?"
+    elif (feature == "6"):
+       sql = "UPDATE santascaravan set child1name = ? where famnumb =  ?"
+    elif (feature == "6"):
+       sql = "UPDATE santascaravan set child1age = ? where famnumb =  ?"
         
     try:
         #if we call the connection execute method it invisibly creates a cursor for us
