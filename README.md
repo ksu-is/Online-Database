@@ -19,7 +19,7 @@ Welcome to Santa's Carvan Database!
 
 X to exit
 
-When entering information do not leave any data questions blank or you will recieve an error message and the data will not save. use "-" for any data that you do not have or do not know.
+When entering information do not leave any data questions blank or you will recieve an error message and the data will not save. Use "-" for any data that you do not have or do not know.
 
 Once you have finished modifying data you can view the data in a more user friendly interface with the DB Browser program downloaded at https://sqlitebrowser.org/
 In DB Browser you can open the "scaravan.db" file from the python project folder to see the information you have input from the terminal. From the DB Browser you can export the data in the tables to a CSV file or JSON to run reports on the data.
