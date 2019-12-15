@@ -6,11 +6,17 @@ This program runs in the terminal and allows users to view, insert, update and d
 
 Use your code editor and open it to the folder named "Python Project" in this repository.
 Run the "santascaravan.py" file in the terminal and follow the promtpts: 
+
 Welcome to Santa's Carvan Database!
+
 1 to view the data
-2 to insert a new data record      
+
+2 to insert a new data record    
+
 3 to update a data record
+
 4 to delete a data record
+
 X to exit
 
 When entering information do not leave any data questions blank or you will recieve an error message and the data will not save. use "-" for any data that you do not have or do not know.
